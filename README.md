@@ -1,3 +1,4 @@
 "# Examen Fundamentos de Algoritmos" 
 "Nombre: Enmanuel Emilio Farfan Moran" 
-"Secci¢n:2643" 
+"Seccion:2643" 
+
