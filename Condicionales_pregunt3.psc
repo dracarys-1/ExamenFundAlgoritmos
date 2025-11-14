@@ -1,0 +1,54 @@
+Algoritmo DeterminarEstadoAcademico
+	// 1. Definición de Variables
+	Definir nombre Como Caracter
+	Definir nota1, nota2, nota3, promedio Como Real
+	Definir estado Como Caracter
+	
+	// 2. Bucle Principal (Repetir hasta que el usuario escriba "FIN")
+	Repetir
+		Escribir ""
+		Escribir "--- Nuevo Estudiante ---"
+		Escribir "1. Ingrese el nombre del estudiante: "
+		Leer nombre
+		
+		// Control de salida
+		si Mayusculas(nombre) = "FIN" Entonces
+			Escribir "Saliendo del sistema..."
+			Esperar 1 Segundos
+		SiNo
+			// 2. Leer las 3 notas parciales
+			Escribir "2. Ingrese la Nota 1 (0-20):"
+			Leer nota1
+			
+			Escribir "3. Ingrese la Nota 2 (0-20):"
+			Leer nota2
+			
+			Escribir "4. Ingrese la Nota 3 (0-20):"
+			Leer nota3
+			
+			// 3. Calcular el promedio
+			promedio <- (nota1 + nota2 + nota3) / 3
+			
+			// 4. Determinar el estado académico (Estructura CONDICIONAL ANIDADA)
+			Si promedio >= 15 Entonces
+				estado <- "APROBADO"
+			SiNo
+				Si promedio >= 11 Entonces
+					estado <- "RECUPERACIÓN"
+				SiNo
+					estado <- "DESAPROBADO"
+				FinSi
+			FinSi
+			
+			// 5. Mostrar mensaje personalizado
+			Escribir ""
+			Escribir "------------------------------------------------"
+			Escribir "RESULTADO ACADÉMICO:"
+			Escribir "Hola ", nombre, ", tu promedio final es: ", Redondear(promedio, 2)
+			Escribir "Hola ", nombre, ", tu estado es: ", estado
+			Escribir "------------------------------------------------"
+		FinSi
+		
+	Hasta Que Mayusculas(nombre) = "FIN"
+	
+FinAlgoritmo
