@@ -1,0 +1,42 @@
+Proceso Figuras
+	Definir op Como Entero
+	Definir x, b, h, r, area, perimetro Como Real
+	Definir resultado Como Texto
+	
+	Repetir
+		Escribir "1 Cuadrado   2 Rectangulo   3 Circulo   4 Salir"
+		Escribir "Opcion: "
+		Leer op
+		
+		Segun op Hacer
+			1:
+				Escribir "Lado: "
+				Leer x
+				area <- x*x
+				perimetro <- 4*x
+				resultado <- "A: " + ConvertirATexto(Redon(area)) + "  P: " + ConvertirATexto(Redon(perimetro))
+				Escribir resultado
+			2:
+				Escribir "Base: "
+				Leer b
+				Escribir "Altura: "
+				Leer h
+				area <- b*h
+				perimetro <- 2*(b+h)
+				resultado <- "A: " + ConvertirATexto(Redon(area)) + "  P: " + ConvertirATexto(Redon(perimetro))
+				Escribir resultado
+			3:
+				Escribir "Radio: "
+				Leer r
+				area <- 3.14159265*r*r
+				perimetro <- 2*3.14159265*r
+				resultado <- "A: " + ConvertirATexto(Redon(area)) + "  P: " + ConvertirATexto(Redon(perimetro))
+				Escribir resultado
+			4:
+				Escribir "Fin"
+			De Otro Modo:
+				Escribir "Opcion invalida"
+		FinSegun
+		Escribir ""
+	Hasta Que op = 4
+FinProceso
